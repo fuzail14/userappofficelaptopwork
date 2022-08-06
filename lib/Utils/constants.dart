@@ -4,19 +4,17 @@ import 'package:hexcolor/hexcolor.dart';
 const splashlogo = 'assets/mia.png';
 const userpic = 'assets/k.webp';
 const userpic2 = 'assets/kk.webp';
-final Color overallcolor = HexColor('#bc8d55');
+const glass = 'assets/g1.webp';
+final Color overallcolor1 = HexColor('#FFC745');
 
-Map<int, Color> color = {
-  50: Color.fromARGB(23, 89, 4, 201),
-  100: Color.fromARGB(51, 17, 8, 68),
-  200: Color.fromARGB(75, 65, 40, 156),
-  300: Color.fromARGB(102, 38, 10, 114),
-  400: Color.fromRGBO(188, 141, 85, .5),
-  500: Color.fromRGBO(188, 141, 85, .6),
-  600: Color.fromRGBO(188, 141, 85, .7),
-  700: Color.fromRGBO(188, 141, 85, .8),
-  800: Color.fromRGBO(188, 141, 85, .9),
-  900: Color.fromRGBO(188, 141, 85, 1),
-};
+final Color overallcolor = HexColor('#8A683E');
 
-MaterialColor colorCustom = MaterialColor(0xFF880E4F, color);
+
+
+DateTime dateTime = DateTime.now();
+String currentdate = dateTime.toString().split(' ')[0];
+TimeOfDay currentTime = TimeOfDay.now();
+
+    var CurrentTime =
+        '${currentTime.hour.toString().padLeft(2, '0')}:${currentTime.minute.toString().padLeft(2, '0')}:${currentTime.period.toString().split('.')[1]}';
+
