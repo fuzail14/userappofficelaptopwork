@@ -22,32 +22,7 @@ class _EventsScreenState extends State<EventsScreen> {
         title: Text('Events'),
         automaticallyImplyLeading: false,
         backgroundColor: overallcolor,
-        // actions: [
-        //   Padding(
-        //       padding: EdgeInsets.only(right: 20.0),
-        //       child: GestureDetector(
-        //         onTap: () {
-        //           showSearch(
-        //               context: context,
-        //               delegate: UserScreenCustomSearchDelegate());
-        //         },
-        //         child: Icon(
-        //           Icons.search,
-        //           size: 26.0,
-        //         ),
-        //       )),
-        //   Padding(
-        //       padding: EdgeInsets.only(right: 20.0),
-        //       child: GestureDetector(
-        //         onTap: () {
-        //           Get.offAndToNamed(addeventsscreen);
-        //         },
-        //         child: Icon(
-        //           Icons.add,
-        //           size: 26.0,
-        //         ),
-        //       )),
-        // ],
+      
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -196,14 +171,19 @@ class _EventsScreenState extends State<EventsScreen> {
                    
                       },
                       child: Card(
+                        
+                        shadowColor: overallcolor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18.0),
                         ),
                         child: ListTile(
+                          
+                          
                           title: Text('Event Title'),
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              
                               Text('Start Date: ${eventstartdate}'),
                               SizedBox(
                                 height: 10,
