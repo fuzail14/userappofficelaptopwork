@@ -39,7 +39,7 @@ class AddReportToGateKeeperController extends GetxController {
     var currentTime =
         '${picked!.hour.toString().padLeft(2, '0')}:${picked.minute.toString().padLeft(2, '0')}:${picked.period.toString().split('.')[1]}';
 
-    if (currentTime != null) currentTime.toString();
+ currentTime.toString();
     guesttime.text = currentTime.toString().split(' ')[0].trim();
     update();
   }

@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
@@ -215,14 +215,22 @@ class _ReportToAdminScreenState extends State<ReportToAdminScreen> {
                         subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Report Description',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
+                            
                             SizedBox(
                               height: 10,
                             ),
                             Text('Report Date: ${eventstartdate}'),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('Report Status:',style: TextStyle(fontWeight: FontWeight.bold),),
+                            
+
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('Request Pending'),
+                            
                           ],
                         ),
                         trailing: Wrap(children: [

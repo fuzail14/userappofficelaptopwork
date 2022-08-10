@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
+
 
 class AddReportToAdminController extends GetxController {
   final formKey = new GlobalKey<FormState>();
@@ -40,7 +40,7 @@ class AddReportToAdminController extends GetxController {
     var currentTime =
         '${picked!.hour.toString().padLeft(2, '0')}:${picked.minute.toString().padLeft(2, '0')}:${picked.period.toString().split('.')[1]}';
 
-    if (currentTime != null) currentTime.toString();
+ currentTime.toString();
     guesttime.text = currentTime.toString().split(' ')[0].trim();
     update();
   }

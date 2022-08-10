@@ -1,4 +1,4 @@
-import 'dart:io';
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -94,6 +94,7 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                             if (value!.isEmpty || value.length < 1) {
                               return 'Choose Date';
                             }
+                            return null;
                           },
                           decoration: InputDecoration(
                               labelText: 'DATE',
@@ -121,6 +122,7 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                             if (value!.isEmpty || value.length < 1) {
                               return 'Choose TIME';
                             }
+                            return null;
                           },
                           decoration: InputDecoration(
                               labelText: 'TIME',

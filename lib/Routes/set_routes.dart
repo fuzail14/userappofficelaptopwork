@@ -10,3 +10,7 @@ const String addreporttoadminscreen = '/AddReportToAdminScreen';
 const String reporttoadminscreen = '/ReportToAdminScreen';
 const String reporttogatekeeperscreen = '/ReportToGateKeeperScreen';
 const String addreporttogatekeeperscreen = '/AddReportToGateKeeperScreen';
+const String reportshistoryscreen= '/ReportsHistoryScreen';
+const String guestshistoryscreen= '/GuestsHistoryScreen';
+
+

@@ -150,7 +150,7 @@ class UserHomeScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Get.toNamed(eventsscreen);
+                    Get.toNamed(reporttogatekeeperscreen);
                   },
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.187, //137
@@ -192,7 +192,7 @@ class UserHomeScreen extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    //Get.toNamed(viewreportscreen);
+                    Get.toNamed(reportshistoryscreen);
                   },
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.187, //137
@@ -233,6 +233,7 @@ class UserHomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+          
             SizedBox(
               height: 20,
             ),
@@ -241,7 +242,7 @@ class UserHomeScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Get.toNamed(eventsscreen);
+                    Get.toNamed(guestshistoryscreen);
                   },
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.187, //137
