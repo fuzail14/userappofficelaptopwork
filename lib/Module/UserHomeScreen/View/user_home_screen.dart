@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Utils/constants.dart';
+import 'package:userapp/Widgets/custom_container.dart';
 
 class UserHomeScreen extends StatelessWidget {
   @override
@@ -45,7 +46,7 @@ class UserHomeScreen extends StatelessWidget {
       //     ],
       //   ),
       // ),
-     
+
       appBar: AppBar(
         title: Text('Society User'),
         backgroundColor: overallcolor,
@@ -53,237 +54,64 @@ class UserHomeScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding:  EdgeInsets.all(20.0),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Get.toNamed(eventsscreen);
-                  },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.187, //137
-                    width: MediaQuery.of(context).size.width * 0.430, //155
-                    decoration: BoxDecoration(
-                        color: overallcolor,
-                        borderRadius: BorderRadius.circular(18)),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height:
-                              MediaQuery.of(context).size.height * 0.032, //24
-                        ),
-                        Container(
-                          height:
-                              MediaQuery.of(context).size.height * 0.070, //51
-                          width: MediaQuery.of(context).size.width * 0.145, //51
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Icon(Icons.person_add),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Text(
-                          'Society Events',
-                          style: TextStyle(
-                            fontSize:
-                                MediaQuery.of(context).size.width * 0.044, //16
-                            fontFamily: "OpenSansSemiBold",
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                   Get.toNamed(reporttoadminscreen);
-                  },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.187, //137
-                    width: MediaQuery.of(context).size.width * 0.430, //155
-                    decoration: BoxDecoration(
-                        color: overallcolor,
-                        borderRadius: BorderRadius.circular(18)),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height:
-                              MediaQuery.of(context).size.height * 0.032, //24
-                        ),
-                        Container(
-                            height:
-                                MediaQuery.of(context).size.height * 0.070, //51
-                            width:
-                                MediaQuery.of(context).size.width * 0.145, //51
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Icon(Icons.person_add_alt_1)),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Text(
-                          'Report To Admin',
-                          style: TextStyle(
-                            fontSize:
-                                MediaQuery.of(context).size.width * 0.044, //16
-                            fontFamily: "OpenSansSemiBold",
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+            Row(children: [
+              CustomContainer(
+                onTap: () {
+                  Get.toNamed(eventsscreen);
+                },
+                title: 'Society Events',
+                Icon: Icon(Icons.event)
+
+              ),
+              SizedBox(width: 10,),
+              CustomContainer(
+                onTap: () {
+                  Get.toNamed(reporttoadminscreen);
+                },
+                title: 'Report To Admin',
+                Icon: Icon(Icons.admin_panel_settings)
+                
+              )
+            ]),
+            SizedBox(
+              height: 20,
             ),
+            Row(children: [
+              CustomContainer(
+                onTap: () {
+                  Get.toNamed(reporttogatekeeperscreen);
+                },
+                title: 'Report To GateKeeper',
+                Icon: Icon(Icons.person_add)
+                
+              ),
+              SizedBox(width: 10,),
+              CustomContainer(
+                onTap: () {
+                  Get.toNamed(reportshistoryscreen);
+                },
+                title: 'Report History',
+                Icon: Icon(Icons.history)
+                
+              ),
+            ]),
             SizedBox(
               height: 20,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Get.toNamed(reporttogatekeeperscreen);
-                  },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.187, //137
-                    width: MediaQuery.of(context).size.width * 0.430, //155
-                    decoration: BoxDecoration(
-                        color: overallcolor,
-                        borderRadius: BorderRadius.circular(18)),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height:
-                              MediaQuery.of(context).size.height * 0.032, //24
-                        ),
-                        Container(
-                          height:
-                              MediaQuery.of(context).size.height * 0.070, //51
-                          width: MediaQuery.of(context).size.width * 0.145, //51
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Icon(Icons.event),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Text(
-                          'Report To GateKeeper',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize:
-                                MediaQuery.of(context).size.width * 0.044, //16
-                            fontFamily: "OpenSansSemiBold",
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Get.toNamed(reportshistoryscreen);
-                  },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.187, //137
-                    width: MediaQuery.of(context).size.width * 0.430, //155
-                    decoration: BoxDecoration(
-                        color: overallcolor,
-                        borderRadius: BorderRadius.circular(18)),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height:
-                              MediaQuery.of(context).size.height * 0.032, //24
-                        ),
-                        Container(
-                          height:
-                              MediaQuery.of(context).size.height * 0.070, //51
-                          width: MediaQuery.of(context).size.width * 0.145, //51
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Icon(Icons.report),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Text(
-                          'Report History',
-                          style: TextStyle(
-                            fontSize:
-                                MediaQuery.of(context).size.width * 0.044, //16
-                            fontFamily: "OpenSansSemiBold",
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
+                CustomContainer(
                   onTap: () {
                     Get.toNamed(guestshistoryscreen);
                   },
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.187, //137
-                    width: MediaQuery.of(context).size.width * 0.430, //155
-                    decoration: BoxDecoration(
-                        color: overallcolor,
-                        borderRadius: BorderRadius.circular(18)),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height:
-                              MediaQuery.of(context).size.height * 0.032, //24
-                        ),
-                        Container(
-                          height:
-                              MediaQuery.of(context).size.height * 0.070, //51
-                          width: MediaQuery.of(context).size.width * 0.145, //51
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Icon(Icons.event),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Text(
-                          'Guest History',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize:
-                                MediaQuery.of(context).size.width * 0.044, //16
-                            fontFamily: "OpenSansSemiBold",
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  title: 'Guest History',
+                  Icon: Icon(Icons.history)
+                
                 ),
               ],
-            ),
+            )
           ]),
         ),
       ),

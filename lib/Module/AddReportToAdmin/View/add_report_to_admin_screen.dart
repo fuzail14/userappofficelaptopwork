@@ -1,10 +1,9 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:userapp/Module/AddReportToAdmin/Controller/add_report_to_admin_controller.dart';
 import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Utils/constants.dart';
+import 'package:userapp/Widgets/custom_text_form_field.dart';
 
 class AddReportToAdminScreen extends StatefulWidget {
   @override
@@ -34,7 +33,7 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                     child: ListView(
                       children: <Widget>[
                         // second Element
-                        TextFormField(
+                        CustomTextField(
                           controller: controller.nameController,
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -46,17 +45,16 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                             debugPrint('Something changed in Name Text Field');
                             print('value of name $value');
                           },
-                          decoration: InputDecoration(
-                              labelText: 'REPORT TITLE',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0))),
+                          labelText: 'REPORT TITLE',
                         ),
+
                         SizedBox(
                           height: 20,
                         ),
 
                         //third Element
-                        TextFormField(
+
+                        CustomTextField(
                           controller: controller.cnicController,
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -67,10 +65,7 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                           onChanged: (value) {
                             debugPrint('Something changed in Age Text Field');
                           },
-                          decoration: InputDecoration(
-                              labelText: 'REPORT DESCRIPTION',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0))),
+                          labelText: 'REPORT DESCRIPTION',
                         ),
 
                         SizedBox(
@@ -96,10 +91,25 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                             }
                             return null;
                           },
-                          decoration: InputDecoration(
-                              labelText: 'DATE',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0))),
+                          // decoration: InputDecoration(
+                          //     labelText: 'DATE',
+                          //     border: OutlineInputBorder(
+                          //         borderRadius: BorderRadius.circular(5.0))),
+                                   decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15.0),
+            borderSide: BorderSide(color: Color(0xffF4F4F4)),
+          ),
+          filled: true,
+          fillColor: Color(0xffFFFFFF),
+          labelText: 'DATE',
+          border: OutlineInputBorder(
+            borderSide: BorderSide(
+              style: BorderStyle.solid,
+            ),
+            borderRadius: BorderRadius.circular(15.0),
+          )),
+     
                         ),
 
                         SizedBox(
@@ -124,10 +134,22 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                             }
                             return null;
                           },
-                          decoration: InputDecoration(
-                              labelText: 'TIME',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0))),
+                    
+                                   decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15.0),
+            borderSide: BorderSide(color: Color(0xffF4F4F4)),
+          ),
+          filled: true,
+          fillColor: Color(0xffFFFFFF),
+          labelText: 'TIME',
+          border: OutlineInputBorder(
+            borderSide: BorderSide(
+              style: BorderStyle.solid,
+            ),
+            borderRadius: BorderRadius.circular(15.0),
+          )),
+     
                         ),
                         SizedBox(
                           height: 20,

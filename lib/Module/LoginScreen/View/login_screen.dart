@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:userapp/Module/LoginScreen/Controller/login_screen_controller.dart';
 import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Utils/constants.dart';
+import 'package:userapp/Widgets/custom_text_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -36,7 +37,8 @@ class _LoginScreenScreenState extends State<LoginScreen> {
                         SizedBox(
                           height: 20,
                         ),
-                        TextFormField(
+                        CustomTextField(
+                          labelText: 'CNIC',
                           keyboardType: TextInputType.number,
                           controller: controller.cnic,
                           validator: (value) {
@@ -49,15 +51,12 @@ class _LoginScreenScreenState extends State<LoginScreen> {
                             debugPrint('Something changed in Cnic Text Field');
                             print('value of cnic $value');
                           },
-                          decoration: InputDecoration(
-                              labelText: 'CNIC',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0))),
                         ),
                         SizedBox(
                           height: 20,
                         ),
-                        TextFormField(
+                        CustomTextField(
+                          labelText: 'PASSWORD',
                           keyboardType: TextInputType.number,
                           controller: controller.password,
                           validator: (value) {
@@ -71,41 +70,39 @@ class _LoginScreenScreenState extends State<LoginScreen> {
                                 'Something changed in Password Text Field');
                             print('value of Password $value');
                           },
-                          decoration: InputDecoration(
-                              labelText: 'Password',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0))),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 30,
                         ),
-                        Row(
-                          children: <Widget>[
-                            Expanded(
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  primary: overallcolor,
-                                  shape: new RoundedRectangleBorder(
-                                    borderRadius:
-                                        new BorderRadius.circular(30.0),
-                                  ),
-                                ),
-                                child: Text(
-                                  'Save',
-                                  textScaleFactor: 1.5,
-                                ),
-                                onPressed: () {
-                                  if (controller.formKey.currentState!
-                                      .validate()) {
-                                    controller.formKey.currentState!.save();
-                                    Get.toNamed(userhomecreen);
-                                  } else {
-                                    return null;
-                                  }
-                                },
+                        SizedBox(
+                          width: 200,
+                          height: 70,
+                          
+                          child: ElevatedButton(
+                            
+                            style: ElevatedButton.styleFrom(
+                              primary: overallcolor,
+                              
+                              shape: new RoundedRectangleBorder(
+                                borderRadius:
+                                    new BorderRadius.circular(30.0),
+                                    
                               ),
                             ),
-                          ],
+                            child: Text(
+                              'Save',
+                              textScaleFactor: 1.5,
+                            ),
+                            onPressed: () {
+                              if (controller.formKey.currentState!
+                                  .validate()) {
+                                controller.formKey.currentState!.save();
+                                Get.toNamed(userhomecreen);
+                              } else {
+                                return null;
+                              }
+                            },
+                          ),
                         ),
                       ]),
                 ),

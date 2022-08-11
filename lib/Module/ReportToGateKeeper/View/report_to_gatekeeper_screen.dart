@@ -55,7 +55,7 @@ class _ReportToGateKeeperScreenState extends State<ReportToGateKeeperScreen> {
                         context: context,
                         builder: (context) {
                           return CustomAlertDialog(
-                            title: 'Full',
+                            title: 'Report Full Detail',
                             Columnc: <Widget>[
                               
                              
