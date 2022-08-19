@@ -13,4 +13,10 @@ const String addreporttogatekeeperscreen = '/AddReportToGateKeeperScreen';
 const String reportshistoryscreen= '/ReportsHistoryScreen';
 const String guestshistoryscreen= '/GuestsHistoryScreen';
 
+const String hireserviceproviderscreen= '/HireServiceProviderScreen';
+
+const String hireserviceproviderviewprofilescreen= '/HireServiceProviderViewProfileScreen';
+
+
+
 

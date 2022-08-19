@@ -6,6 +6,8 @@ import 'package:userapp/Module/ChatAvailbility/View/chat_availbility_screen.dart
 import 'package:userapp/Module/ChatScreen/View/chat_screen.dart';
 import 'package:userapp/Module/Events/View/events_screen.dart';
 import 'package:userapp/Module/GuestHistory/View/guests_history_screen.dart';
+import 'package:userapp/Module/HireServiceProvider/View/hire_service_provider_screen.dart';
+import 'package:userapp/Module/HireServiceProvider/View/hire_service_provider_view_profile.dart';
 import 'package:userapp/Module/LoginScreen/View/login_screen.dart';
 import 'package:userapp/Module/ReportToAdmin/View/report_to_admin_screen.dart';
 import 'package:userapp/Module/ReportToGateKeeper/View/report_to_gatekeeper_screen.dart';
@@ -29,6 +31,10 @@ class ScreenBindings extends Bindings {
     Get.lazyPut(() => AddReportToGateKeeperScreen());
     Get.lazyPut(() => ReportsHistoryScreen());
     Get.lazyPut(() => GuestsHistoryScreen());
+    Get.lazyPut(() => HireServiceProviderScreen());
+
+    Get.lazyPut(() => HireServiceProviderViewProfileScreen());
+    
     
     
   }

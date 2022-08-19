@@ -95,21 +95,21 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                           //     labelText: 'DATE',
                           //     border: OutlineInputBorder(
                           //         borderRadius: BorderRadius.circular(5.0))),
-                                   decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15.0),
-            borderSide: BorderSide(color: Color(0xffF4F4F4)),
-          ),
-          filled: true,
-          fillColor: Color(0xffFFFFFF),
-          labelText: 'DATE',
-          border: OutlineInputBorder(
-            borderSide: BorderSide(
-              style: BorderStyle.solid,
-            ),
-            borderRadius: BorderRadius.circular(15.0),
-          )),
-     
+                          decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                                borderSide:
+                                    BorderSide(color: Color(0xffF4F4F4)),
+                              ),
+                              filled: true,
+                              fillColor: Color(0xffFFFFFF),
+                              labelText: 'DATE',
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  style: BorderStyle.solid,
+                                ),
+                                borderRadius: BorderRadius.circular(15.0),
+                              )),
                         ),
 
                         SizedBox(
@@ -134,22 +134,22 @@ class _AddReportToAdminScreenScreenState extends State<AddReportToAdminScreen> {
                             }
                             return null;
                           },
-                    
-                                   decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15.0),
-            borderSide: BorderSide(color: Color(0xffF4F4F4)),
-          ),
-          filled: true,
-          fillColor: Color(0xffFFFFFF),
-          labelText: 'TIME',
-          border: OutlineInputBorder(
-            borderSide: BorderSide(
-              style: BorderStyle.solid,
-            ),
-            borderRadius: BorderRadius.circular(15.0),
-          )),
-     
+                          decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                                borderSide:
+                                    BorderSide(color: Color(0xffF4F4F4)),
+                              ),
+                              filled: true,
+                              fillColor: Color(0xffFFFFFF),
+                              labelText: 'TIME',
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  style: BorderStyle.solid,
+                                ),
+                                borderRadius: BorderRadius.circular(15.0),
+                              )),
+                       
                         ),
                         SizedBox(
                           height: 20,

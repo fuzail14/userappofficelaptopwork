@@ -55,8 +55,16 @@ class UserHomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding:  EdgeInsets.all(20.0),
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Row(children: [
+          child: Column(
+            
+            
+          
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+
+              children: [
               CustomContainer(
                 onTap: () {
                   Get.toNamed(eventsscreen);
@@ -65,7 +73,7 @@ class UserHomeScreen extends StatelessWidget {
                 Icon: Icon(Icons.event)
 
               ),
-              SizedBox(width: 10,),
+              
               CustomContainer(
                 onTap: () {
                   Get.toNamed(reporttoadminscreen);
@@ -75,10 +83,14 @@ class UserHomeScreen extends StatelessWidget {
                 
               )
             ]),
-            SizedBox(
-              height: 20,
-            ),
-            Row(children: [
+            SizedBox(height: MediaQuery.of(context).size.height*0.020,),
+            
+
+            
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              
+              children: [
               CustomContainer(
                 onTap: () {
                   Get.toNamed(reporttogatekeeperscreen);
@@ -87,7 +99,7 @@ class UserHomeScreen extends StatelessWidget {
                 Icon: Icon(Icons.person_add)
                 
               ),
-              SizedBox(width: 10,),
+              
               CustomContainer(
                 onTap: () {
                   Get.toNamed(reportshistoryscreen);
@@ -97,10 +109,12 @@ class UserHomeScreen extends StatelessWidget {
                 
               ),
             ]),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: MediaQuery.of(context).size.height*0.020,),
+
+            
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              
               children: [
                 CustomContainer(
                   onTap: () {
@@ -110,6 +124,17 @@ class UserHomeScreen extends StatelessWidget {
                   Icon: Icon(Icons.history)
                 
                 ),
+                
+
+                CustomContainer(
+                  onTap: () {
+                    Get.toNamed(hireserviceproviderscreen);
+                  },
+                  title: 'Hire Service Provider',
+                  Icon: Icon(Icons.room_service)
+                
+                ),
+                
               ],
             )
           ]),
