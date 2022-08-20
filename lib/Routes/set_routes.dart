@@ -16,6 +16,11 @@ const String guestshistoryscreen= '/GuestsHistoryScreen';
 const String hireserviceproviderscreen= '/HireServiceProviderScreen';
 
 const String hireserviceproviderviewprofilescreen= '/HireServiceProviderViewProfileScreen';
+const String serviceprovidersattendancescreen= '/ServiceProvidersAttendanceScreen';
+
+const String viewattendancedetailscreen= '/ViewAttendanceDetailScreen';
+
+
 
 
 

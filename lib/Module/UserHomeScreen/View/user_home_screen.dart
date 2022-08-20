@@ -136,7 +136,24 @@ class UserHomeScreen extends StatelessWidget {
                 ),
                 
               ],
-            )
+            ),
+SizedBox(height: 10,),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              
+              children: [
+                CustomContainer(
+                  onTap: () {
+                    Get.toNamed(serviceprovidersattendancescreen);
+                  },
+                  title: 'Service Provider Attendance',
+                  Icon: Icon(Icons.history)
+                
+                ),
+
+                                
+              ],
+            ),
           ]),
         ),
       ),
