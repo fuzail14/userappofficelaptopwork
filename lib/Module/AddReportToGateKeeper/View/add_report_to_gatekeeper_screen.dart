@@ -133,6 +133,7 @@ class _AddReportToGateKeeperScreenState
                         SizedBox(
                           height: 20,
                         ),
+                        
 
                         // fourth Element
                         TextFormField(

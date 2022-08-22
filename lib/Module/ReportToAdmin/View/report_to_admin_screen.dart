@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:userapp/Module/ReportToAdmin/Controller/report_to_admin_controller.dart';
 import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Utils/constants.dart';
 import 'package:userapp/Utils/custom_alert_dialog.dart';
@@ -13,6 +14,7 @@ class ReportToAdminScreen extends StatefulWidget {
 }
 
 class _ReportToAdminScreenState extends State<ReportToAdminScreen> {
+  ReportToAdminController reportToAdminController = ReportToAdminController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,29 +135,65 @@ class _ReportToAdminScreenState extends State<ReportToAdminScreen> {
                                     SizedBox(
                                       height: 20,
                                     ),
-                                    Center(
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Get.back();
-                                        },
-                                        child: new Container(
-                                          padding: new EdgeInsets.all(16.0),
-                                          decoration: new BoxDecoration(
-                                              color: const Color(0xFF33b17c),
-                                              borderRadius:
-                                                  BorderRadius.circular(30)),
-                                          child: new Text(
-                                            ' Okay',
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.green,
+                                              fixedSize: Size(100, 40),
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          20))),
+                                          onPressed: () {
+                                            //Get.offAndToNamed(viewreportscreen);
+                                            AwesomeDialog(
+                                              context: context,
+                                              dialogType: DialogType.INFO,
+                                              animType: AnimType.BOTTOMSLIDE,
+                                              title: 'Problem Solved?',
+                                              desc:
+                                                  'Are You Sure Your  Problem Resolved...',
+                                                    btnOkOnPress: () {
+                                                Get.back();
+                                              },
+                                              btnCancelOnPress: () {
+                                                Get.back();
+                                              },
+                                              btnCancelText: 'No',
+                                              btnOkText: 'Yes',
+                                            
+                                            )..show();
+                                          },
+                                          child: const Text(
+                                            'Problem Solved',
                                             style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18.0,
-                                              fontFamily:
-                                                  'helvetica_neue_light',
-                                            ),
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold),
                                             textAlign: TextAlign.center,
                                           ),
                                         ),
-                                      ),
+                                        ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.red,
+                                              fixedSize: Size(100, 40),
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          20))),
+                                          onPressed: () {
+                                            Get.back();
+                                          },
+                                          child: const Text(
+                                            'No',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ]));
                     },

@@ -43,4 +43,5 @@ class AddReportToGateKeeperController extends GetxController {
     guesttime.text = currentTime.toString().split(' ')[0].trim();
     update();
   }
+
 }
