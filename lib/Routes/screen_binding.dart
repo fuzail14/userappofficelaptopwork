@@ -9,6 +9,7 @@ import 'package:userapp/Module/GuestHistory/View/guests_history_screen.dart';
 import 'package:userapp/Module/HireServiceProvider/View/hire_service_provider_screen.dart';
 import 'package:userapp/Module/HireServiceProvider/View/hire_service_provider_view_profile.dart';
 import 'package:userapp/Module/LoginScreen/View/login_screen.dart';
+import 'package:userapp/Module/PanicMode/View/panic_mode_screen.dart';
 import 'package:userapp/Module/ReportToAdmin/View/report_to_admin_screen.dart';
 import 'package:userapp/Module/ReportToGateKeeper/View/report_to_gatekeeper_screen.dart';
 import 'package:userapp/Module/ReportsHistory/View/reports_history_screen.dart';
@@ -40,6 +41,8 @@ class ScreenBindings extends Bindings {
     Get.lazyPut(() => ServiceProvidersAttendanceScreen());
 
     Get.lazyPut(() => ViewAttendanceDetailScreen());
+
+    Get.lazyPut(() => PanicModeScreen());
     
     
     

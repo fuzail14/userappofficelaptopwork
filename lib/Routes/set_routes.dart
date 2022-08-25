@@ -20,6 +20,8 @@ const String serviceprovidersattendancescreen= '/ServiceProvidersAttendanceScree
 
 const String viewattendancedetailscreen= '/ViewAttendanceDetailScreen';
 
+const String panicmodescreen= '/PanicModeScreen';
+
 
 
 

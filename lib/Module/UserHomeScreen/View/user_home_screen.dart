@@ -54,104 +54,79 @@ class UserHomeScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding:  EdgeInsets.all(20.0),
-          child: Column(
-            
-            
-          
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-
-              children: [
+          padding: EdgeInsets.all(20.0),
+          child: Column(children: [
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               CustomContainer(
-                onTap: () {
-                  Get.toNamed(eventsscreen);
-                },
-                title: 'Society Events',
-                Icon: Icon(Icons.event)
-
-              ),
-              
+                  onTap: () {
+                    Get.toNamed(eventsscreen);
+                  },
+                  title: 'Society Events',
+                  Icon: Icon(Icons.event)),
               CustomContainer(
-                onTap: () {
-                  Get.toNamed(reporttoadminscreen);
-                },
-                title: 'Report To Admin',
-                Icon: Icon(Icons.admin_panel_settings)
-                
-              )
+                  onTap: () {
+                    Get.toNamed(reporttoadminscreen);
+                  },
+                  title: 'Report To Admin',
+                  Icon: Icon(Icons.admin_panel_settings))
             ]),
-            SizedBox(height: MediaQuery.of(context).size.height*0.020,),
-            
-
-            
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              
-              children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.020,
+            ),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               CustomContainer(
-                onTap: () {
-                  Get.toNamed(reporttogatekeeperscreen);
-                },
-                title: 'Report To GateKeeper',
-                Icon: Icon(Icons.person_add)
-                
-              ),
-              
+                  onTap: () {
+                    Get.toNamed(reporttogatekeeperscreen);
+                  },
+                  title: 'Report To GateKeeper',
+                  Icon: Icon(Icons.person_add)),
               CustomContainer(
-                onTap: () {
-                  Get.toNamed(reportshistoryscreen);
-                },
-                title: 'Report History',
-                Icon: Icon(Icons.history)
-                
-              ),
+                  onTap: () {
+                    Get.toNamed(reportshistoryscreen);
+                  },
+                  title: 'Report History',
+                  Icon: Icon(Icons.history)),
             ]),
-            SizedBox(height: MediaQuery.of(context).size.height*0.020,),
-
-            
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.020,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              
               children: [
                 CustomContainer(
-                  onTap: () {
-                    Get.toNamed(guestshistoryscreen);
-                  },
-                  title: 'Guest History',
-                  Icon: Icon(Icons.history)
-                
-                ),
-                
-
+                    onTap: () {
+                      Get.toNamed(guestshistoryscreen);
+                    },
+                    title: 'Guest History',
+                    Icon: Icon(Icons.history)),
                 CustomContainer(
-                  onTap: () {
-                    Get.toNamed(hireserviceproviderscreen);
-                  },
-                  title: 'Hire Service Provider',
-                  Icon: Icon(Icons.room_service)
-                
-                ),
-                
+                    onTap: () {
+                      Get.toNamed(hireserviceproviderscreen);
+                    },
+                    title: 'Hire Service Provider',
+                    Icon: Icon(Icons.room_service)),
               ],
             ),
-SizedBox(height: 10,),
-             Row(
+            SizedBox(
+              height: 10,
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              
               children: [
                 CustomContainer(
-                  onTap: () {
-                    Get.toNamed(serviceprovidersattendancescreen);
-                  },
-                  title: 'Service Provider Attendance',
-                  Icon: Icon(Icons.history)
-                
-                ),
+                    onTap: () {
+                      Get.toNamed(serviceprovidersattendancescreen);
+                    },
+                    title: 'Service Provider Attendance',
+                    Icon: Icon(Icons.history)),
 
-                                
+                    CustomContainer(
+                    onTap: () {
+                      Get.toNamed(panicmodescreen);
+                    },
+                    title: 'Panic Mode',
+                    Icon: Icon(Icons.dangerous)),
+                    
               ],
             ),
           ]),
