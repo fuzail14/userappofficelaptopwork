@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:icon_badge/icon_badge.dart';
 import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Utils/constants.dart';
 import 'package:userapp/Widgets/custom_container.dart';
@@ -51,27 +52,31 @@ class UserHomeScreen extends StatelessWidget {
         title: Text('Society User'),
         backgroundColor: overallcolor,
         automaticallyImplyLeading: false,
-      ),
+           actions: <Widget>[
+            IconBadge(
+              icon: Icon(Icons.notifications_none),
+              itemCount: 100,
+              badgeColor: Colors.red,
+              maxCount: 99,
+              hideZero: true,
+              onTap: () {
+                //Get.toNamed(reportnotificationsscreen);
+                
+              },
+            ),
+          ]),
+      
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(20.0),
           child: Column(children: [
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              CustomContainer(
-                  onTap: () {
-                    Get.toNamed(eventsscreen);
-                  },
-                  title: 'Society Events',
-                  Icon: Icon(Icons.event)),
-              CustomContainer(
-                  onTap: () {
-                    Get.toNamed(reporttoadminscreen);
-                  },
-                  title: 'Report To Admin',
-                  Icon: Icon(Icons.admin_panel_settings))
-            ]),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.020,
+            Text(
+              'Reports',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+            Divider(
+              color: overallcolor,
+              thickness: 2,
             ),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               CustomContainer(
@@ -79,36 +84,30 @@ class UserHomeScreen extends StatelessWidget {
                     Get.toNamed(reporttogatekeeperscreen);
                   },
                   title: 'Report To GateKeeper',
-                  Icon: Icon(Icons.person_add)),
+                  Icon: Icon(Icons.person_add, color: overallcolor)),
               CustomContainer(
                   onTap: () {
-                    Get.toNamed(reportshistoryscreen);
+                    Get.toNamed(reporttoadminscreen);
                   },
-                  title: 'Report History',
-                  Icon: Icon(Icons.history)),
+                  title: 'Report To Admin',
+                  Icon: Icon(Icons.admin_panel_settings, color: overallcolor))
             ]),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.020,
+              height: 20,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomContainer(
-                    onTap: () {
-                      Get.toNamed(guestshistoryscreen);
-                    },
-                    title: 'Guest History',
-                    Icon: Icon(Icons.history)),
-                CustomContainer(
-                    onTap: () {
-                      Get.toNamed(hireserviceproviderscreen);
-                    },
-                    title: 'Hire Service Provider',
-                    Icon: Icon(Icons.room_service)),
-              ],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: []),
+            Text(
+              'Service Provider',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+            Divider(
+              color: overallcolor,
+              thickness: 2,
             ),
             SizedBox(
-              height: 10,
+              height: MediaQuery.of(context).size.height * 0.020,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -118,15 +117,72 @@ class UserHomeScreen extends StatelessWidget {
                       Get.toNamed(serviceprovidersattendancescreen);
                     },
                     title: 'Service Provider Attendance',
-                    Icon: Icon(Icons.history)),
-
-                    CustomContainer(
+                    Icon: Icon(Icons.history, color: overallcolor)),
+                CustomContainer(
+                    onTap: () {
+                      Get.toNamed(hireserviceproviderscreen);
+                    },
+                    title: 'Hire Service Provider',
+                    Icon: Icon(Icons.room_service, color: overallcolor)),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Histories',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+            Divider(
+              color: overallcolor,
+              thickness: 2,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomContainer(
+                    onTap: () {
+                      Get.toNamed(guestshistoryscreen);
+                    },
+                    title: 'Guest History',
+                    Icon: Icon(Icons.history, color: overallcolor)),
+                CustomContainer(
+                    onTap: () {
+                      Get.toNamed(reportshistoryscreen);
+                    },
+                    title: 'Report History',
+                    Icon: Icon(Icons.history, color: overallcolor)),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Others',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+            Divider(
+              color: overallcolor,
+              thickness: 2,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomContainer(
+                    onTap: () {
+                      Get.toNamed(eventsscreen);
+                    },
+                    title: 'Society Events',
+                    Icon: Icon(
+                      Icons.event,
+                      color: overallcolor,
+                    )),
+                CustomContainer(
                     onTap: () {
                       Get.toNamed(panicmodescreen);
                     },
                     title: 'Panic Mode',
-                    Icon: Icon(Icons.dangerous)),
-                    
+                    Icon: Icon(Icons.dangerous, color: overallcolor)),
               ],
             ),
           ]),

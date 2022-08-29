@@ -39,6 +39,7 @@ dependencies:
   hexcolor: ^2.0.7
   awesome_dialog: ^2.2.1
   getwidget: ^3.0.1
+  icon_badge: ^1.0.0
   
 
 dev_dependencies:

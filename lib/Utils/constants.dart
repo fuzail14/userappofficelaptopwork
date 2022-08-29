@@ -5,9 +5,9 @@ const splashlogo = 'assets/mia.png';
 const userpic = 'assets/k.webp';
 const userpic2 = 'assets/kk.webp';
 const glass = 'assets/g1.webp';
-final Color overallcolor1 = HexColor('#FFC745');
+final Color overallcolor1 = HexColor('#00BFA6');
 
-final Color overallcolor = HexColor('#8A683E');
+final Color overallcolor = HexColor('#00BFA6');
 
 
 
