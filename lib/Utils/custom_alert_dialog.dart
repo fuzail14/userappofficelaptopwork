@@ -1,13 +1,9 @@
-
 import 'package:flutter/material.dart';
 
-
-
 class CustomAlertDialog extends StatelessWidget {
-  CustomAlertDialog({required this.title, required this.Columnc
-  });
+  CustomAlertDialog({required this.title, required this.Columnc});
   String? title;
- dynamic Columnc;
+  dynamic Columnc;
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +16,11 @@ class CustomAlertDialog extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Padding(
-            padding:  EdgeInsets.all(20.0),
-            child: Column(
-               crossAxisAlignment: CrossAxisAlignment.start,
-                                   mainAxisAlignment:
-                                       MainAxisAlignment.spaceEvenly,
-
-              children: Columnc)
-            
-          
-          )),
+              padding: EdgeInsets.all(20.0),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: Columnc))),
     );
   }
 }
-

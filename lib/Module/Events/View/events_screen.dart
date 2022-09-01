@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:userapp/Utils/constants.dart';
 import 'package:userapp/Utils/custom_alert_dialog.dart';
 
+import '../../../Routes/set_routes.dart';
+
 class EventsScreen extends StatefulWidget {
   @override
   State<EventsScreen> createState() => _EventsScreenState();
@@ -169,6 +171,16 @@ class _EventsScreenState extends State<EventsScreen> {
                                 height: 10,
                               ),
                               Text('End Date: ${eventstartdate}'),
+                                 Row(
+                                  children: [
+                                    
+                                    TextButton(
+                                        onPressed: () {
+                                          Get.toNamed(vieweventimages);
+                                        },
+                                        child: Text('View Event Images')),
+                                  ],
+                                )
                             ],
                           ),
                         ),

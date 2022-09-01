@@ -22,6 +22,12 @@ const String viewattendancedetailscreen= '/ViewAttendanceDetailScreen';
 
 const String panicmodescreen= '/PanicModeScreen';
 
+const String notificationsscreen = '/NotificationsScreen';
+
+const String vieweventimages = '/ViewEventImages';
+
+const String viewimage = '/ViewImage';
+
 
 
 

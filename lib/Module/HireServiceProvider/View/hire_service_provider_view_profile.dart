@@ -27,6 +27,7 @@ class _HireServiceProviderViewProfileScreenState
 
   int? currentTimeIndex;
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -342,7 +343,7 @@ class _HireServiceProviderViewProfileScreenState
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     color: (currentTimeIndex == index)
-                                        ? Colors.green
+                                        ? overallcolor
                                         : Colors.white,
                                     border: Border.all(
                                         width: 1,
@@ -360,8 +361,10 @@ class _HireServiceProviderViewProfileScreenState
                                 )),
                               ),
                             );
+
                           }),
                     ),
+                   
                     SizedBox(
                       height: 20,
                     ),

@@ -6,7 +6,15 @@ import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Utils/constants.dart';
 import 'package:userapp/Widgets/custom_container.dart';
 
-class UserHomeScreen extends StatelessWidget {
+import '../../../Utils/custom_alert_dialog.dart';
+
+class UserHomeScreen extends StatefulWidget {
+  @override
+  State<UserHomeScreen> createState() => _UserHomeScreenState();
+}
+
+class _UserHomeScreenState extends State<UserHomeScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,10 +57,10 @@ class UserHomeScreen extends StatelessWidget {
       // ),
 
       appBar: AppBar(
-        title: Text('Society User'),
-        backgroundColor: overallcolor,
-        automaticallyImplyLeading: false,
-           actions: <Widget>[
+          title: Text('Society User'),
+          backgroundColor: overallcolor,
+          automaticallyImplyLeading: false,
+          actions: <Widget>[
             IconBadge(
               icon: Icon(Icons.notifications_none),
               itemCount: 100,
@@ -60,12 +68,11 @@ class UserHomeScreen extends StatelessWidget {
               maxCount: 99,
               hideZero: true,
               onTap: () {
-                //Get.toNamed(reportnotificationsscreen);
-                
+                Get.toNamed(notificationsscreen);
               },
             ),
           ]),
-      
+
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(20.0),
@@ -81,16 +88,16 @@ class UserHomeScreen extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               CustomContainer(
                   onTap: () {
+                    Get.toNamed(reporttoadminscreen);
+                  },
+                  title: 'Report To Admin',
+                  Icon: Icon(Icons.admin_panel_settings, color: overallcolor)),
+              CustomContainer(
+                  onTap: () {
                     Get.toNamed(reporttogatekeeperscreen);
                   },
                   title: 'Report To GateKeeper',
                   Icon: Icon(Icons.person_add, color: overallcolor)),
-              CustomContainer(
-                  onTap: () {
-                    Get.toNamed(reporttoadminscreen);
-                  },
-                  title: 'Report To Admin',
-                  Icon: Icon(Icons.admin_panel_settings, color: overallcolor))
             ]),
             SizedBox(
               height: 20,
@@ -114,16 +121,16 @@ class UserHomeScreen extends StatelessWidget {
               children: [
                 CustomContainer(
                     onTap: () {
-                      Get.toNamed(serviceprovidersattendancescreen);
-                    },
-                    title: 'Service Provider Attendance',
-                    Icon: Icon(Icons.history, color: overallcolor)),
-                CustomContainer(
-                    onTap: () {
                       Get.toNamed(hireserviceproviderscreen);
                     },
                     title: 'Hire Service Provider',
                     Icon: Icon(Icons.room_service, color: overallcolor)),
+                CustomContainer(
+                    onTap: () {
+                      Get.toNamed(serviceprovidersattendancescreen);
+                    },
+                    title: 'Service Provider Attendance',
+                    Icon: Icon(Icons.history, color: overallcolor)),
               ],
             ),
             SizedBox(
@@ -142,15 +149,15 @@ class UserHomeScreen extends StatelessWidget {
               children: [
                 CustomContainer(
                     onTap: () {
-                      Get.toNamed(guestshistoryscreen);
+                      Get.toNamed(reportshistoryscreen);
                     },
-                    title: 'Guest History',
+                    title: 'Admin Reports History',
                     Icon: Icon(Icons.history, color: overallcolor)),
                 CustomContainer(
                     onTap: () {
-                      Get.toNamed(reportshistoryscreen);
+                      Get.toNamed(guestshistoryscreen);
                     },
-                    title: 'Report History',
+                    title: 'Guest History',
                     Icon: Icon(Icons.history, color: overallcolor)),
               ],
             ),
@@ -192,6 +199,8 @@ class UserHomeScreen extends StatelessWidget {
           backgroundColor: overallcolor,
           onPressed: () {
             Get.toNamed(chatavailbilityscreen);
+
+          
           },
           child: const Icon(Icons.chat)),
     );

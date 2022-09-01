@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 class ViewImage extends StatefulWidget {
-
-  final String? tag;
-  final String? img;
-
-  const ViewImage({ super.key, required this.tag,required this.img});
-
-
   @override
   State<ViewImage> createState() => _ViewImageState();
 }
 
 class _ViewImageState extends State<ViewImage> {
+  var arguments = Get.arguments;
+
+  String? img;
+  String? tag;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.black,
-        body: Hero(tag: widget.tag!,
-      child: Center(child: Image.network(widget.img!)),
-
-   
-    ));
+    img = arguments[0];
+    tag = arguments[1];
+    return Scaffold(
+        backgroundColor: Colors.black,
+        body: Hero(
+          tag: tag!,
+          child: Center(child: Image.asset(img!)),
+        ));
   }
 }
