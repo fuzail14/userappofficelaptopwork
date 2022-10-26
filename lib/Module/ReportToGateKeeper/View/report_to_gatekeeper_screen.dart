@@ -1,19 +1,22 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:getwidget/getwidget.dart';
+
 import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Utils/constants.dart';
 import 'package:userapp/Utils/custom_alert_dialog.dart';
 
-class ReportToGateKeeperScreen extends StatefulWidget {
+import '../../../Constants/constants.dart';
+import '../../../Widgets/My Button/my_button.dart';
+
+class GatekeeperReports extends StatefulWidget {
   @override
-  State<ReportToGateKeeperScreen> createState() =>
-      _ReportToGateKeeperScreenState();
+  State<GatekeeperReports> createState() =>
+      _GatekeeperReportsState();
 }
 
-class _ReportToGateKeeperScreenState extends State<ReportToGateKeeperScreen> {
+class _GatekeeperReportsState extends State<GatekeeperReports> {
   DateTime dateTime = DateTime.now();
   TimeOfDay timeOfDay = TimeOfDay.now();
 
@@ -121,37 +124,37 @@ class _ReportToGateKeeperScreenState extends State<ReportToGateKeeperScreen> {
                                     'Rim-5676543',
                                   ),
                                   SizedBox(
-                                    height: 10,
+                                    // GFCard(
+                                    //   boxFit: BoxFit.cover,
+                                    //   title: GFListTile(
+                                    //     title: Text(
+                                    //       'Pending:',
+                                    //       style: TextStyle(
+                                    //           fontWeight: FontWeight.bold),
+                                    //     ),
+                                    //     subTitle: Text(
+                                    //       'Your Request Is Pending',
+                                    //       style: TextStyle(
+                                    //           fontWeight: FontWeight.bold),
+                                    //     ),
+                                    //   ),
+                                    //   content: Column(
+                                    //     children: [
+                                    //       Text(
+                                    //         '$CurrentTime',
+                                    //         style: TextStyle(
+                                    //             fontWeight: FontWeight.bold),
+                                    //       ),
+                                    //       Text(
+                                    //         '$currentdate',
+                                    //         style: TextStyle(
+                                    //             fontWeight: FontWeight.bold),
+                                    //       ),
+                                    //     ],
+                                    //   ),
+                                    // ),    height: 10,
                                   ),
-                                  GFCard(
-                                    boxFit: BoxFit.cover,
-                                    title: GFListTile(
-                                      title: Text(
-                                        'Pending:',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      subTitle: Text(
-                                        'Your Request Is Pending',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Text(
-                                          '$CurrentTime',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text(
-                                          '$currentdate',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+
                                   SizedBox(
                                     height: 20,
                                   ),
@@ -217,19 +220,7 @@ class _ReportToGateKeeperScreenState extends State<ReportToGateKeeperScreen> {
                         trailing: Wrap(children: [
                           InkWell(
                             onTap: () {
-                              AwesomeDialog(
-                                context: context,
-                                dialogType: DialogType.QUESTION,
-                                animType: AnimType.BOTTOMSLIDE,
-                                title: 'Are You Sure',
-                                desc:
-                                    'Are You Sure You Want To Delete This.............',
-                                btnCancelOnPress: () {},
-                                btnOkOnPress: () {},
-                                btnOkText: 'Delete',
-                                btnOkColor: overallcolor,
-                                btnCancelColor: overallcolor,
-                              )..show();
+                              showDeleteDialog(context);
                             },
                             child: Icon(
                               Icons.delete,
@@ -250,4 +241,33 @@ class _ReportToGateKeeperScreenState extends State<ReportToGateKeeperScreen> {
       ),
     );
   }
+
+
+  Future<void> showDeleteDialog(BuildContext context) async {
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+          title: const Text('Delete'),
+          content: const Text('Do you want to delete this Admin?'),
+          actions: <Widget>[
+            MyButton(
+                onPressed: () {
+
+                },
+                horizontalPadding: 0,
+                verticalPadding: 0,
+               child: Text('Delete'),
+                backgroundColor: primaryColor,),
+            MyButton(
+              onPressed: () {
+
+              },
+              horizontalPadding: 0,
+              verticalPadding: 0,
+              child: Text('Cancel'),
+              ),
+          ],
+        ));
+  }
+
 }

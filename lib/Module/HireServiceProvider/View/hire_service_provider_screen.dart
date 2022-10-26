@@ -1,4 +1,3 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -8,12 +7,12 @@ import 'package:userapp/Module/HireServiceProvider/View/hireserviceproviderscree
 import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Utils/constants.dart';
 
-
 class HireServiceProviderScreen extends StatefulWidget {
   const HireServiceProviderScreen({Key? key}) : super(key: key);
 
   @override
-  State<HireServiceProviderScreen> createState() => _HireServiceProviderScreenState();
+  State<HireServiceProviderScreen> createState() =>
+      _HireServiceProviderScreenState();
 }
 
 class _HireServiceProviderScreenState extends State<HireServiceProviderScreen> {
@@ -21,27 +20,25 @@ class _HireServiceProviderScreenState extends State<HireServiceProviderScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          actions: [
+        actions: [
           Padding(
               padding: EdgeInsets.only(right: 20.0),
               child: GestureDetector(
                 onTap: () {
                   showSearch(
                       context: context,
-                      delegate: HireServiceProviderScreenCustomSearchDelegate());
+                      delegate:
+                          HireServiceProviderScreenCustomSearchDelegate());
                 },
                 child: Icon(
                   Icons.search,
                   size: 26.0,
                 ),
               )),
-         
         ],
-      
         title: Text('Service Provider'),
         automaticallyImplyLeading: false,
         backgroundColor: overallcolor,
-        
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -49,7 +46,7 @@ class _HireServiceProviderScreenState extends State<HireServiceProviderScreen> {
           child: ListView.builder(
             itemBuilder: (context, index) {
               return Container(
-                height: MediaQuery.of(context).size.height*0.450,
+                height: MediaQuery.of(context).size.height * 0.450,
                 child: Card(
                     clipBehavior: Clip.antiAlias,
                     elevation: 5,
@@ -62,11 +59,9 @@ class _HireServiceProviderScreenState extends State<HireServiceProviderScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding:
-                                const EdgeInsets.symmetric(vertical: 15),
+                            padding: const EdgeInsets.symmetric(vertical: 15),
                             child: Column(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 CircleAvatar(
                                   backgroundImage: AssetImage('assets/k.webp'),
@@ -74,8 +69,8 @@ class _HireServiceProviderScreenState extends State<HireServiceProviderScreen> {
                                   radius: 60,
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 10),
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 10),
                                   child: Text(
                                     'Name',
                                     style: const TextStyle(
@@ -85,56 +80,33 @@ class _HireServiceProviderScreenState extends State<HireServiceProviderScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding:
-                                      const EdgeInsets.only(bottom: 10),
-                                  child: Column(children: [
-
-                                    Text('Hamza')
-
-                                    
-                                  ]),
+                                  padding: const EdgeInsets.only(bottom: 10),
+                                  child: Column(children: [Text('Hamza')]),
                                 ),
                                 Padding(
-                                  padding:
-                                      const EdgeInsets.only(bottom: 10),
-                                  child: Column(children: [
-
-                                    Text('Role: Cook')
-
-                                    
-                                  ]),
+                                  padding: const EdgeInsets.only(bottom: 10),
+                                  child: Column(children: [Text('Role: Cook')]),
                                 ),
                                 Padding(
-                                  padding:
-                                      const EdgeInsets.only(bottom: 10),
-                                  child: Column(children: [
-
-                                    Text('Experience: 2Years')
-
-                                    
-                                  ]),
+                                  padding: const EdgeInsets.only(bottom: 10),
+                                  child: Column(
+                                      children: [Text('Experience: 2Years')]),
                                 ),
-                                
-                                
                               ],
                             ),
                           ), //Text
                           Container(
-                            
                             width: double.infinity,
                             color: Colors.white,
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
                                   vertical: 20, horizontal: 80),
-                              child: RaisedButton(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
+                              child: ElevatedButton(
                                 onPressed: () {
-                                  Get.toNamed(hireserviceproviderviewprofilescreen);
-
+                                  Get.toNamed(
+                                      hireserviceproviderviewprofilescreen);
                                 },
-                                color: Colors.black,
+
                                 child: const Padding(
                                   padding: EdgeInsets.all(4.0),
                                   child: Text(

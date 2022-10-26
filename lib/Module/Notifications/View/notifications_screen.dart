@@ -119,7 +119,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                                           borderRadius:
                                               BorderRadius.circular(20))),
                                   onPressed: () {
-                                    Get.offAllNamed(userhomecreen);
+                                    Get.offAllNamed(homescreen);
                                   },
                                   child: const Text(
                                     'Accept',
@@ -183,7 +183,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                                                         formKey.currentState!
                                                             .save();
                                                          Get.offAllNamed(
-                                                             userhomecreen);
+                                                             homescreen);
                                                       } else {
                                                         return null;
                                                       }

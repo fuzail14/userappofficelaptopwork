@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:getwidget/getwidget.dart';
 
 import 'package:userapp/Utils/constants.dart';
 import 'package:userapp/Utils/custom_alert_dialog.dart';
@@ -76,35 +75,35 @@ class _GuestsHistoryScreenState extends State<GuestsHistoryScreen> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  GFCard(
-                                    boxFit: BoxFit.cover,
-                                    title: GFListTile(
-                                      title: Text(
-                                        'Status:',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      subTitle: Text(
-                                        'Date: $currentdate',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Text(
-                                          'Check In Date Time: $currentdate $CurrentTime',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text(
-                                          'Check Out Date Time: $currentdate $CurrentTime',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+                                  // GFCard(
+                                  //   boxFit: BoxFit.cover,
+                                  //   title: GFListTile(
+                                  //     title: Text(
+                                  //       'Status:',
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold),
+                                  //     ),
+                                  //     subTitle: Text(
+                                  //       'Date: $currentdate',
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold),
+                                  //     ),
+                                  //   ),
+                                  //   content: Column(
+                                  //     children: [
+                                  //       Text(
+                                  //         'Check In Date Time: $currentdate $CurrentTime',
+                                  //         style: TextStyle(
+                                  //             fontWeight: FontWeight.bold),
+                                  //       ),
+                                  //       Text(
+                                  //         'Check Out Date Time: $currentdate $CurrentTime',
+                                  //         style: TextStyle(
+                                  //             fontWeight: FontWeight.bold),
+                                  //       ),
+                                  //     ],
+                                  //   ),
+                                  // ),
                                   SizedBox(
                                     height: 20,
                                   ),

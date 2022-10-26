@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
-import 'package:userapp/Module/AddReportToAdmin/View/add_report_to_admin_screen.dart';
-import 'package:userapp/Module/AddReportToGateKeeper/View/add_report_to_gatekeeper_screen.dart';
+import 'package:userapp/Module/AddReportToGateKeeper/View/report_to_gatekeeper.dart';
 import 'package:userapp/Module/ChatAvailbility/View/chat_availbility_screen.dart';
 import 'package:userapp/Module/ChatScreen/View/chat_screen.dart';
 import 'package:userapp/Module/Events/View/events_screen.dart';
@@ -8,19 +7,24 @@ import 'package:userapp/Module/Events/View/view_event_images_screen.dart';
 import 'package:userapp/Module/GuestHistory/View/guests_history_screen.dart';
 import 'package:userapp/Module/HireServiceProvider/View/hire_service_provider_screen.dart';
 import 'package:userapp/Module/HireServiceProvider/View/hire_service_provider_view_profile.dart';
-import 'package:userapp/Module/LoginScreen/View/login_screen.dart';
+
 import 'package:userapp/Module/Notifications/View/notifications_screen.dart';
 import 'package:userapp/Module/PanicMode/View/panic_mode_screen.dart';
-import 'package:userapp/Module/ReportToAdmin/View/report_to_admin_screen.dart';
+
 import 'package:userapp/Module/ReportToGateKeeper/View/report_to_gatekeeper_screen.dart';
 import 'package:userapp/Module/ReportsHistory/View/reports_history_screen.dart';
 import 'package:userapp/Module/ServiceProviderAttendanceHistory/View/service_providers_attendance.dart';
 import 'package:userapp/Module/ServiceProviderAttendanceHistory/View/view_attendance_detail.dart';
 import 'package:userapp/Module/Splash/View/splash_screen.dart';
-import 'package:userapp/Module/UserHomeScreen/View/user_home_screen.dart';
 import 'package:userapp/Routes/screen_binding.dart';
 import 'package:userapp/Routes/set_routes.dart';
 import 'package:userapp/Widgets/image_show.dart';
+
+import '../Module/HomeScreen/View/home_screen.dart';
+import '../Module/Login/View/login_screen.dart';
+import '../Module/Report to Sub Admin/View/Admin Reports/admin_reports.dart';
+import '../Module/Report to Sub Admin/View/Report to Admin/report_to_admin.dart';
+
 
 class RouteManagement {
   static List<GetPage> getPages() {
@@ -34,14 +38,14 @@ class RouteManagement {
       ),
       GetPage(
         name: loginscreen,
-        page: () => LoginScreen(),
+        page: () => Login(),
         binding: ScreenBindings(),
         // transition: Transition.circularReveal,
         //      transitionDuration: Duration(seconds: 1)
       ),
       GetPage(
-        name: userhomecreen,
-        page: () => UserHomeScreen(),
+        name: homescreen,
+        page: () => HomeScreen(),
         binding: ScreenBindings(),
         // transition: Transition.circularReveal,
         //      transitionDuration: Duration(seconds: 1)
@@ -68,29 +72,29 @@ class RouteManagement {
         //      transitionDuration: Duration(seconds: 1)
       ),
       GetPage(
-        name: addreporttoadminscreen,
-        page: () => AddReportToAdminScreen(),
+        name: reporttoadmin,
+        page: () => ReportToAdmin(),
         binding: ScreenBindings(),
         // transition: Transition.circularReveal,
         //      transitionDuration: Duration(seconds: 1)
       ),
       GetPage(
-        name: reporttoadminscreen,
-        page: () => ReportToAdminScreen(),
+        name: adminreports,
+        page: () => AdminReports(),
         binding: ScreenBindings(),
         // transition: Transition.circularReveal,
         //      transitionDuration: Duration(seconds: 1)
       ),
       GetPage(
         name: reporttogatekeeperscreen,
-        page: () => ReportToGateKeeperScreen(),
+        page: () => GatekeeperReports(),
         binding: ScreenBindings(),
         // transition: Transition.circularReveal,
         //      transitionDuration: Duration(seconds: 1)
       ),
       GetPage(
         name: addreporttogatekeeperscreen,
-        page: () => AddReportToGateKeeperScreen(),
+        page: () => ReportToGateKeeper(),
         binding: ScreenBindings(),
         // transition: Transition.circularReveal,
         //      transitionDuration: Duration(seconds: 1)

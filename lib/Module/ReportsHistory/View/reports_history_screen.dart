@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:getwidget/getwidget.dart';
-
 import 'package:userapp/Utils/constants.dart';
 import 'package:userapp/Utils/custom_alert_dialog.dart';
 
@@ -89,35 +87,35 @@ class _ReportsHistoryScreenState extends State<ReportsHistoryScreen> {
                                     height: 10,
                                   ),
 
-                                  GFCard(
-                                    boxFit: BoxFit.cover,
-                                    title: GFListTile(
-                                      title: Text(
-                                        'Status:',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      subTitle: Text(
-                                        'Pending Date Time: $currentdate  $CurrentTime',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Text(
-                                          'Approved Date Time: $currentdate $CurrentTime',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text(
-                                          'Completed Date Time: $currentdate $CurrentTime',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+                                  // GFCard(
+                                  //   boxFit: BoxFit.cover,
+                                  //   title: GFListTile(
+                                  //     title: Text(
+                                  //       'Status:',
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold),
+                                  //     ),
+                                  //     subTitle: Text(
+                                  //       'Pending Date Time: $currentdate  $CurrentTime',
+                                  //       style: TextStyle(
+                                  //           fontWeight: FontWeight.bold),
+                                  //     ),
+                                  //   ),
+                                  //   content: Column(
+                                  //     children: [
+                                  //       Text(
+                                  //         'Approved Date Time: $currentdate $CurrentTime',
+                                  //         style: TextStyle(
+                                  //             fontWeight: FontWeight.bold),
+                                  //       ),
+                                  //       Text(
+                                  //         'Completed Date Time: $currentdate $CurrentTime',
+                                  //         style: TextStyle(
+                                  //             fontWeight: FontWeight.bold),
+                                  //       ),
+                                  //     ],
+                                  //   ),
+                                  // ),
                                   // Row(
                                   //   children: [
                                   //     Container(

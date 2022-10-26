@@ -384,7 +384,7 @@ class _HireServiceProviderViewProfileScreenState
                             textScaleFactor: 1.5,
                           ),
                           onPressed: () {
-                            Get.offAllNamed(userhomecreen);
+                            Get.offAllNamed(homescreen);
                           },
                         ),
                       ),
