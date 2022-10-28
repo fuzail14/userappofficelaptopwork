@@ -158,14 +158,14 @@ class _AdminReportsState extends State<AdminReports> {
                                                                       .circular(
                                                                           20))),
                                                   onPressed: () {
-                                                    showProblemDialog(context,
-                                                    snapshot
-                                            .data.data[index].id,
-                                            snapshot
-                                            .data.data[index].userid,
-                                            controller.userdata.bearerToken!
-                                            );
-                                          
+                                                    showProblemDialog(
+                                                        context,
+                                                        snapshot.data
+                                                            .data[index].id,
+                                                        snapshot.data
+                                                            .data[index].userid,
+                                                        controller.userdata
+                                                            .bearerToken!);
                                                   },
                                                   child: const Text(
                                                     'Problem Solved',
@@ -194,7 +194,6 @@ class _AdminReportsState extends State<AdminReports> {
                                     //     width: 20,
                                     //   ),
                                     // ]),
-                               
                                   ),
                                 ),
                               ),
@@ -210,7 +209,8 @@ class _AdminReportsState extends State<AdminReports> {
             }));
   }
 
-  Future<void> showProblemDialog(BuildContext context,int reportid, int userid, String token) async {
+  Future<void> showProblemDialog(
+      BuildContext context, int reportid, int userid, String token) async {
     return showDialog(
         context: context,
         builder: (BuildContext context) => AlertDialog(
@@ -219,11 +219,10 @@ class _AdminReportsState extends State<AdminReports> {
               actions: <Widget>[
                 MyButton(
                   onPressed: () {
-
-                   _adminReportsController. ProblemSolvedButtonApi(reportid,userid,token);
+                    _adminReportsController.ProblemSolvedButtonApi(
+                        reportid, userid, token);
 
                     Get.back();
-
                   },
                   horizontalPadding: 0,
                   verticalPadding: 0,
@@ -233,7 +232,6 @@ class _AdminReportsState extends State<AdminReports> {
                 MyButton(
                   onPressed: () {
                     Get.back();
-                    
                   },
                   horizontalPadding: 0,
                   verticalPadding: 0,

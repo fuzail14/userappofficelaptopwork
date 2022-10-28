@@ -16,32 +16,30 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final HomeScreenController _homeScreenController =Get.put(HomeScreenController());
+  final HomeScreenController _homeScreenController =
+      Get.put(HomeScreenController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
-
-        centerTitle: true,
+          centerTitle: true,
           title: Text('Home'),
           backgroundColor: overallcolor,
-
           actions: <Widget>[
-            IconBadge(
-              icon: Icon(Icons.notifications_none),
-              itemCount: 100,
-              badgeColor: Colors.red,
-              maxCount: 99,
-              hideZero: true,
-              onTap: () {
-                Get.toNamed(notificationsscreen);
-              },
-            ),
+            // IconBadge(
+            //   icon: Icon(Icons.notifications_none),
+            //   itemCount: 100,
+            //   badgeColor: Colors.red,
+            //   maxCount: 99,
+            //   hideZero: true,
+            //   onTap: () {
+            //     Get.toNamed(notificationsscreen);
+            //   },
+            // ),
+
           ]),
       drawer: Drawer(
-
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -58,12 +56,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Get.offAllNamed(loginscreen);
               },
             ),
-
           ],
         ),
       ),
-
-
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(20.0),
@@ -79,51 +74,53 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               CustomContainer(
                   onTap: () {
-                    Get.toNamed(adminreports,arguments:_homeScreenController.userdata);
+                    Get.toNamed(adminreports,
+                        arguments: _homeScreenController.userdata);
                   },
                   title: 'Report To Admin',
                   Icon: Icon(Icons.admin_panel_settings, color: overallcolor)),
               CustomContainer(
-                  onTap: () {
-                    Get.toNamed(reporttogatekeeperscreen);
-                  },
-                  title: 'Report To GateKeeper',
-                  Icon: Icon(Icons.person_add, color: overallcolor)),
+                onTap: () {
+                  Get.toNamed(reporttogatekeeperscreen);
+                },
+                title: 'Report To GateKeeper',
+                Icon: Icon(Icons.person_add, color: overallcolor),
+              ),
             ]),
             SizedBox(
               height: 20,
             ),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: []),
-            Text(
-              'Service Provider',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-            ),
-            Divider(
-              color: overallcolor,
-              thickness: 2,
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.020,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomContainer(
-                    onTap: () {
-                      Get.toNamed(hireserviceproviderscreen);
-                    },
-                    title: 'Hire Service Provider',
-                    Icon: Icon(Icons.room_service, color: overallcolor)),
-                CustomContainer(
-                    onTap: () {
-                      Get.toNamed(serviceprovidersattendancescreen);
-                    },
-                    title: 'Service Provider Attendance',
-                    Icon: Icon(Icons.history, color: overallcolor)),
-              ],
-            ),
+            // Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: []),
+            // Text(
+            //   'Service Provider',
+            //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            // ),
+            // Divider(
+            //   color: overallcolor,
+            //   thickness: 2,
+            // ),
+            // SizedBox(
+            //   height: MediaQuery.of(context).size.height * 0.020,
+            // ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     CustomContainer(
+            //         onTap: () {
+            //           Get.toNamed(hireserviceproviderscreen);
+            //         },
+            //         title: 'Hire Service Provider',
+            //         Icon: Icon(Icons.room_service, color: overallcolor)),
+            //     CustomContainer(
+            //         onTap: () {
+            //           Get.toNamed(serviceprovidersattendancescreen);
+            //         },
+            //         title: 'Service Provider Attendance',
+            //         Icon: Icon(Icons.history, color: overallcolor)),
+            //   ],
+            // ),
             SizedBox(
               height: 10,
             ),
@@ -175,25 +172,30 @@ class _HomeScreenState extends State<HomeScreen> {
                       Icons.event,
                       color: overallcolor,
                     )),
+                // CustomContainer(
+                //     onTap: () {
+                //       Get.toNamed(panicmodescreen);
+                //     },
+                //     title: 'Panic Mode',
+                //     Icon: Icon(Icons.dangerous, color: overallcolor)),
+
                 CustomContainer(
                     onTap: () {
                       Get.toNamed(panicmodescreen);
                     },
-                    title: 'Panic Mode',
-                    Icon: Icon(Icons.dangerous, color: overallcolor)),
+                    title: 'Notice Board',
+                    Icon: Icon(Icons.notification_add, color: overallcolor)),
               ],
             ),
           ]),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-          backgroundColor: overallcolor,
-          onPressed: () {
-            Get.toNamed(chatavailbilityscreen);
-
-          
-          },
-          child: const Icon(Icons.chat)),
+      // floatingActionButton: FloatingActionButton(
+      //     backgroundColor: overallcolor,
+      //     onPressed: () {
+      //       Get.toNamed(chatavailbilityscreen);
+      //     },
+      //     child: const Icon(Icons.chat)),
     );
   }
 }
