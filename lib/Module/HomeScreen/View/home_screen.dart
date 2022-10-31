@@ -137,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 CustomContainer(
                     onTap: () {
-                      Get.toNamed(reportshistoryscreen);
+                      Get.toNamed(reportshistoryscreen,arguments: _homeScreenController.user);
                     },
                     title: 'Admin Reports History',
                     Icon: Icon(Icons.history, color: overallcolor)),
@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 CustomContainer(
                     onTap: () {
-                      Get.toNamed(eventsscreen);
+                      Get.toNamed(eventsscreen,arguments: _homeScreenController.user);
                     },
                     title: 'Society Events',
                     Icon: Icon(
@@ -181,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 CustomContainer(
                     onTap: () {
-                      Get.toNamed(panicmodescreen);
+                      Get.toNamed(noticeboardscreen,arguments: _homeScreenController.user);
                     },
                     title: 'Notice Board',
                     Icon: Icon(Icons.notification_add, color: overallcolor)),

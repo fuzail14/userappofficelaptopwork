@@ -7,13 +7,11 @@ import 'package:userapp/Widgets/My%20Button/my_button.dart';
 import 'package:userapp/Widgets/My%20TextForm%20Field/my_textform_field.dart';
 import '../../Controller/Report to Admin Controller/report_to_admin_controller.dart';
 
-class ReportToAdmin extends StatefulWidget {
-  @override
-  State<ReportToAdmin> createState() =>
-      _ReportToAdminState();
-}
 
-class _ReportToAdminState extends State<ReportToAdmin> {
+
+class ReportToAdmin extends GetView {
+final AddReportToAdminController addReportToAdminController = Get.put(AddReportToAdminController());
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

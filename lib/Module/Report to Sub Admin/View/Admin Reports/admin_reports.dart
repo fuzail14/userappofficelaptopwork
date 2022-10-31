@@ -8,12 +8,9 @@ import '../../../../Constants/constants.dart';
 import '../../../../Utils/custom_alert_dialog.dart';
 import '../../../../Widgets/My Button/my_button.dart';
 
-class AdminReports extends StatefulWidget {
-  @override
-  State<AdminReports> createState() => _AdminReportsState();
-}
 
-class _AdminReportsState extends State<AdminReports> {
+
+class AdminReports extends GetView {
   final AdminReportsController _adminReportsController =
       Get.put(AdminReportsController());
 
@@ -126,7 +123,7 @@ class _AdminReportsState extends State<AdminReports> {
                                           height: 10,
                                         ),
                                         Text(snapshot
-                                            .data.data[index].updatedAt),
+                                            .data.data[index].date),
                                         SizedBox(
                                           height: 10,
                                         ),

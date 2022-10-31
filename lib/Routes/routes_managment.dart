@@ -7,12 +7,13 @@ import 'package:userapp/Module/Events/View/view_event_images_screen.dart';
 import 'package:userapp/Module/GuestHistory/View/guests_history_screen.dart';
 import 'package:userapp/Module/HireServiceProvider/View/hire_service_provider_screen.dart';
 import 'package:userapp/Module/HireServiceProvider/View/hire_service_provider_view_profile.dart';
+import 'package:userapp/Module/NoticeBoard/View/notice_board_screen.dart';
 
 import 'package:userapp/Module/Notifications/View/notifications_screen.dart';
 import 'package:userapp/Module/PanicMode/View/panic_mode_screen.dart';
 
 import 'package:userapp/Module/ReportToGateKeeper/View/report_to_gatekeeper_screen.dart';
-import 'package:userapp/Module/ReportsHistory/View/reports_history_screen.dart';
+import 'package:userapp/Module/ReportsHistory/View/admin_reports_history_screen.dart';
 import 'package:userapp/Module/ServiceProviderAttendanceHistory/View/service_providers_attendance.dart';
 import 'package:userapp/Module/ServiceProviderAttendanceHistory/View/view_attendance_detail.dart';
 import 'package:userapp/Module/Splash/View/splash_screen.dart';
@@ -166,6 +167,14 @@ class RouteManagement {
       GetPage(
         name: viewimage,
         page: () => ViewImage(),
+        binding: ScreenBindings(),
+        // transition: Transition.circularReveal,
+        //      transitionDuration: Duration(seconds: 1)
+      ),
+
+      GetPage(
+        name: noticeboardscreen,
+        page: () => NoticeBoardScreen(),
         binding: ScreenBindings(),
         // transition: Transition.circularReveal,
         //      transitionDuration: Duration(seconds: 1)

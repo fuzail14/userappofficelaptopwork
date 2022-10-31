@@ -27,6 +27,9 @@ const String notificationsscreen = '/NotificationsScreen';
 const String vieweventimages = '/ViewEventImages';
 
 const String viewimage = '/ViewImage';
+const String noticeboardscreen = '/NoticeBoardScreen';
+
+
 
 
 
