@@ -9,16 +9,12 @@ class User {
   final String? bearerToken;
 
   User(
-      {
-        this.userid,
-        this.subadminid,
-        this.firstName,
-        this.lastName,
-       this.cnic,
-        this.roleId,
-       this.roleName,
-     this.bearerToken
-      }
-
-     );
+      {this.userid,
+      this.subadminid,
+      this.firstName,
+      this.lastName,
+      this.cnic,
+      this.roleId,
+      this.roleName,
+      this.bearerToken});
 }
